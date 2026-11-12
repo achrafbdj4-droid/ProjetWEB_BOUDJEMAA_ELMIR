@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+        name="description"
+        content="Dernière Pousse vous aide à choisir et entretenir des plantes adaptées à votre espace et à votre rythme."
+    >
+
+    <title>Dernière Pousse — Accueil</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#contenu">
+        Aller au contenu
+    </a>
+
+    <header class="site-header">
+
+        <div class="container header-inner">
+
+            <a
+                class="brand"
+                href="index.html"
+                aria-label="Dernière Pousse, accueil"
+            >
+                <span class="brand-mark">DP</span>
+
+                <span>
+                    DERNIÈRE
+                    <strong>POUSSE</strong>
+                </span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-controls="navigation"
+                onclick="ouvrirMenu()"
+            >
+                Menu
+            </button>
+
+            <nav
+                class="nav"
+                id="navigation"
+                aria-label="Navigation principale"
+            >
+                <a href="index.html" aria-current="page">
+                    Accueil
+                </a>
+
+                <a href="trouver-mes-plantes.html">
+                    Trouver mes plantes
+                </a>
+
+                <a href="catalogue.html">
+                    Catalogue
+                </a>
+
+                <a href="bordeaux.html">
+                    À Bordeaux
+                </a>
+
+                <a href="mon-jardin.html">
+                    Mon jardin
+                </a>
+
+                <a href="a-propos-contact.html">
+                    À propos
+                </a>
+            </nav>
+
+            <a class="header-cta" href="trouver-mes-plantes.html">
+                Faire le test
+                <span aria-hidden="true">↗</span>
+            </a>
+
+        </div>
+
+    </header>
+
+    <main id="contenu">
+
+        <section class="hero">
+
+            <div class="container hero-grid">
+
+                <div class="hero-copy">
+
+                    <p class="eyebrow">
+                        LE JARDINAGE, À VOTRE RYTHME
+                    </p>
+
+                    <h1>
+                        Un peu de vert change
+                        <em>tout un quotidien.</em>
+                    </h1>
+
+                    <p class="hero-lead">
+                        La bonne plante n'est pas seulement celle que l'on trouve jolie.
+                        C'est celle qui se plaît chez vous, avec votre lumière,
+                        votre espace et le temps dont vous disposez.
+                    </p>
+
+                    <div class="button-row">
+
+                        <a
+                            class="button button-primary"
+                            href="trouver-mes-plantes.html"
+                        >
+                            Trouver mes plantes
+                            <span aria-hidden="true">↗</span>
+                        </a>
+
+                        <a class="text-link" href="catalogue.html">
+                            Voir le catalogue
+                        </a>
+
+                    </div>
+
+                    <div class="hero-note">
+
+                        <span class="note-line"></span>
+
+                        <span>
+                            Des conseils simples pour mieux choisir et mieux garder ses plantes.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-visual">
+
+                    <img
+                        id="carrousel"
+                        src="img/pothos.avif"
+                        alt="Plante verte installée dans un intérieur lumineux"
+                    >
+
+                    <div class="image-caption">
+
+                        <span class="caption-dot"></span>
+
+                        Cultiver commence par un bon choix.
+
+                    </div>
+
+                    <div class="carousel-controls">
+
+                        <button
+                            class="button button-light"
+                            type="button"
+                            onclick="imagePrecedente()"
+                        >
+                            Précédent
+                        </button>
+
+                        <button
+                            class="button button-light"
+                            type="button"
+                            onclick="imageSuivante()"
+                        >
+                            Suivant
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section container">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        UNE MÉTHODE SIMPLE
+                    </p>
+
+                    <h2>
+                        Commencer au bon endroit.
+                    </h2>
+
+                </div>
+
+                <p>
+                    Quelques repères suffisent pour éviter les achats au hasard
+                    et créer un espace qui vous ressemble.
+                </p>
+
+            </div>
+
+            <div class="steps-grid">
+
+                <article class="step-card">
+
+                    <span class="step-number">01</span>
+
+                    <h3>
+                        Observer son espace
+                    </h3>
+
+                    <p>
+                        La lumière, la place disponible et l'exposition
+                        donnent déjà de bons indices.
+                    </p>
+
+                </article>
+
+                <article class="step-card">
+
+                    <span class="step-number">02</span>
+
+                    <h3>
+                        Choisir avec méthode
+                    </h3>
+
+                    <p>
+                        Comparez les besoins des plantes avec vos habitudes
+                        et vos envies.
+                    </p>
+
+                </article>
+
+                <article class="step-card">
+
+                    <span class="step-number">03</span>
+
+                    <h3>
+                        Suivre leur évolution
+                    </h3>
+
+                    <p>
+                        Notez les arrosages et les observations pour apprendre
+                        au fil des semaines.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="feature-band">
+
+            <div class="container feature-grid">
+
+                <img
+                    src="img/jardin-exterieur.avif"
+                    alt="Espace extérieur végétalisé"
+                    loading="lazy"
+                >
+
+                <div>
+
+                    <p class="eyebrow">
+                        PENSÉ POUR VOTRE ENVIRONNEMENT
+                    </p>
+
+                    <h2>
+                        À Bordeaux aussi, les saisons ont leur mot à dire.
+                    </h2>
+
+                    <p>
+                        Chaleur estivale, pluies, périodes plus fraîches :
+                        retrouvez des conseils pratiques pour adapter vos gestes
+                        au climat de la Gironde.
+                    </p>
+
+                    <a class="button button-light" href="bordeaux.html">
+                        Jardiner en Gironde
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section container">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        EXPLOREZ LE SITE
+                    </p>
+
+                    <h2>
+                        Votre prochain geste vert.
+                    </h2>
+
+                </div>
+
+                <p>
+                    Un outil pour choisir, un catalogue pour comparer
+                    et un espace pour suivre vos plantes.
+                </p>
+
+            </div>
+
+            <div class="link-grid">
+
+                <a
+                    class="link-card"
+                    href="trouver-mes-plantes.html"
+                >
+
+                    <span class="link-index">
+                        01 / CONSEIL
+                    </span>
+
+                    <h3>
+                        Le questionnaire
+                    </h3>
+
+                    <p>
+                        Recevez des suggestions selon votre espace
+                        et votre disponibilité.
+                    </p>
+
+                    <span class="link-arrow">
+                        Faire le test ↗
+                    </span>
+
+                </a>
+
+                <a
+                    class="link-card"
+                    href="catalogue.html"
+                >
+
+                    <span class="link-index">
+                        02 / DÉCOUVERTE
+                    </span>
+
+                    <h3>
+                        Le catalogue
+                    </h3>
+
+                    <p>
+                        Filtrez les plantes par lumière
+                        et niveau d'entretien.
+                    </p>
+
+                    <span class="link-arrow">
+                        Explorer ↗
+                    </span>
+
+                </a>
+
+                <a
+                    class="link-card"
+                    href="mon-jardin.html"
+                >
+
+                    <span class="link-index">
+                        03 / SUIVI
+                    </span>
+
+                    <h3>
+                        Mon jardin
+                    </h3>
+
+                    <p>
+                        Gardez une trace de vos plantes
+                        et de vos prochains arrosages.
+                    </p>
+
+                    <span class="link-arrow">
+                        Organiser ↗
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <div>
+
+                <a class="brand brand-footer" href="index.html">
+
+                    <span class="brand-mark">DP</span>
+
+                    <span>
+                        DERNIÈRE
+                        <strong>POUSSE</strong>
+                    </span>
+
+                </a>
+
+                <p>
+                    Choisir mieux. Cultiver simplement.
+                </p>
+
+            </div>
+
+            <div class="footer-right">
+
+                <span class="school-mark">
+
+                    EFREI
+
+                    <small>
+                        ÉCOLE D'INGÉNIEUR·E·S
+                    </small>
+
+                </span>
+
+                <a href="a-propos-contact.html">
+                    À propos et contact
+                </a>
+
+                <span>
+                    © 2026 Dernière Pousse
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
