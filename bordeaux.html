@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+        name="description"
+        content="Conseils de jardinage saisonniers pour Bordeaux et la Gironde."
+    >
+
+    <title>Jardiner à Bordeaux — Dernière Pousse</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/main.js" defer></script>
+    <script src="js/bordeaux.js" defer></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#contenu">
+        Aller au contenu
+    </a>
+
+    <header class="site-header">
+
+        <div class="container header-inner">
+
+            <a class="brand" href="index.html">
+
+                <span class="brand-mark">
+                    DP
+                </span>
+
+                <span>
+                    DERNIÈRE
+                    <strong>POUSSE</strong>
+                </span>
+
+            </a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-controls="navigation"
+                aria-expanded="false"
+                onclick="ouvrirMenu()"
+            >
+                Menu
+            </button>
+
+            <nav
+                class="nav"
+                id="navigation"
+                aria-label="Navigation principale"
+            >
+
+                <a href="index.html">
+                    Accueil
+                </a>
+
+                <a href="trouver-mes-plantes.html">
+                    Trouver mes plantes
+                </a>
+
+                <a href="catalogue.html">
+                    Catalogue
+                </a>
+
+                <a
+                    href="bordeaux.html"
+                    aria-current="page"
+                >
+                    À Bordeaux
+                </a>
+
+                <a href="mon-jardin.html">
+                    Mon jardin
+                </a>
+
+                <a href="a-propos-contact.html">
+                    À propos
+                </a>
+
+            </nav>
+
+            <a class="header-cta" href="mon-jardin.html">
+                Mon jardin ↗
+            </a>
+
+        </div>
+
+    </header>
+
+    <main id="contenu">
+
+        <section class="page-intro container">
+
+            <p class="eyebrow">
+                JARDINER EN GIRONDE
+            </p>
+
+            <h1>
+                À Bordeaux, on jardine
+                <em>au fil des saisons.</em>
+            </h1>
+
+            <p>
+                Le climat océanique offre de belles possibilités,
+                mais les fortes chaleurs estivales et les périodes
+                humides demandent quelques ajustements. Voici des
+                repères pour organiser vos gestes.
+            </p>
+
+        </section>
+
+        <div class="section container climate-grid">
+
+            <article class="climate-card">
+
+                <span class="climate-number">
+                    01
+                </span>
+
+                <h2>
+                    Anticiper la chaleur
+                </h2>
+
+                <p>
+                    En période chaude, vérifiez l'humidité des pots
+                    plus souvent. Arrosez tôt le matin, au pied des
+                    plantes, et protégez les contenants exposés
+                    du soleil brûlant.
+                </p>
+
+            </article>
+
+            <article class="climate-card">
+
+                <span class="climate-number">
+                    02
+                </span>
+
+                <h2>
+                    Gérer les pluies
+                </h2>
+
+                <p>
+                    Vérifiez le drainage des jardinières et videz
+                    les soucoupes si de l'eau y stagne. Un substrat
+                    adapté limite les excès d'humidité autour
+                    des racines.
+                </p>
+
+            </article>
+
+            <article class="climate-card">
+
+                <span class="climate-number">
+                    03
+                </span>
+
+                <h2>
+                    Protéger du froid
+                </h2>
+
+                <p>
+                    Les gelées restent possibles. Rentrez les plantes
+                    sensibles, surélevez les pots et protégez les sujets
+                    les plus fragiles lors des nuits froides.
+                </p>
+
+            </article>
+
+        </div>
+
+        <section class="section soft-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            CALENDRIER INDICATIF
+                        </p>
+
+                        <h2>
+                            Les gestes de saison.
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Sélectionnez une saison pour afficher les tâches
+                        adaptées à un balcon ou un jardin en Gironde.
+                    </p>
+
+                </div>
+
+                <div
+                    class="season-tabs"
+                    role="group"
+                    aria-label="Choisir une saison"
+                >
+
+                    <button
+                        class="season-tab"
+                        type="button"
+                        onclick="afficherSaison('printemps')"
+                    >
+                        Printemps
+                    </button>
+
+                    <button
+                        class="season-tab"
+                        type="button"
+                        onclick="afficherSaison('ete')"
+                    >
+                        Été
+                    </button>
+
+                    <button
+                        class="season-tab"
+                        type="button"
+                        onclick="afficherSaison('automne')"
+                    >
+                        Automne
+                    </button>
+
+                    <button
+                        class="season-tab"
+                        type="button"
+                        onclick="afficherSaison('hiver')"
+                    >
+                        Hiver
+                    </button>
+
+                </div>
+
+                <div
+                    class="season-panel panel"
+                    id="season-content"
+                    aria-live="polite"
+                >
+
+                    <p class="eyebrow" id="season-label">
+                        MARS À MAI
+                    </p>
+
+                    <h3 id="season-title">
+                        Préparer la reprise.
+                    </h3>
+
+                    <ul class="task-list" id="season-tasks">
+
+                        <li>
+                            Rempoter les plantes qui manquent de place.
+                        </li>
+
+                        <li>
+                            Reprendre progressivement les arrosages.
+                        </li>
+
+                        <li>
+                            Semer certaines aromatiques selon les conditions.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section container">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        REPÈRES PRATIQUES
+                    </p>
+
+                    <h2>
+                        Quelques principes utiles.
+                    </h2>
+
+                </div>
+
+            </div>
+
+            <div class="table-scroll">
+
+                <table>
+
+                    <caption>
+                        Conseils généraux selon la saison en Gironde
+                    </caption>
+
+                    <thead>
+
+                        <tr>
+
+                            <th scope="col">
+                                Saison
+                            </th>
+
+                            <th scope="col">
+                                Priorité
+                            </th>
+
+                            <th scope="col">
+                                À surveiller
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <th scope="row">
+                                Printemps
+                            </th>
+
+                            <td>
+                                Reprise, rempotage, semis
+                            </td>
+
+                            <td>
+                                Les dernières nuits froides
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th scope="row">
+                                Été
+                            </th>
+
+                            <td>
+                                Arrosage raisonné, ombrage
+                            </td>
+
+                            <td>
+                                Le dessèchement rapide des pots
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th scope="row">
+                                Automne
+                            </th>
+
+                            <td>
+                                Nettoyage, plantation adaptée
+                            </td>
+
+                            <td>
+                                Les pluies et l'eau stagnante
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th scope="row">
+                                Hiver
+                            </th>
+
+                            <td>
+                                Protection et arrosage réduit
+                            </td>
+
+                            <td>
+                                Le gel et l'humidité excessive
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p class="form-note">
+                Ces indications sont générales et ne remplacent pas
+                les besoins propres à chaque espèce ni les conditions
+                météorologiques locales.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <div>
+
+                <a
+                    class="brand brand-footer"
+                    href="index.html"
+                >
+
+                    <span class="brand-mark">
+                        DP
+                    </span>
+
+                    <span>
+                        DERNIÈRE
+                        <strong>POUSSE</strong>
+                    </span>
+
+                </a>
+
+                <p>
+                    Choisir mieux. Cultiver simplement.
+                </p>
+
+            </div>
+
+            <div class="footer-right">
+
+                <span class="school-mark">
+                    EFREI
+
+                    <small>
+                        ÉCOLE D'INGÉNIEUR·E·S
+                    </small>
+                </span>
+
+                <a href="a-propos-contact.html">
+                    À propos et contact
+                </a>
+
+                <span>
+                    © 2026 Dernière Pousse
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
