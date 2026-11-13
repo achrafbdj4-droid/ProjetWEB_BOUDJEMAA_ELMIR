@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+        name="description"
+        content="Espace personnel pour enregistrer ses plantes et suivre les arrosages."
+    >
+
+    <title>Mon jardin — Dernière Pousse</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/main.js" defer></script>
+    <script src="js/jardin.js" defer></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#contenu">
+        Aller au contenu
+    </a>
+
+    <header class="site-header">
+
+        <div class="container header-inner">
+
+            <a class="brand" href="index.html">
+
+                <span class="brand-mark">DP</span>
+
+                <span>
+                    DERNIÈRE
+                    <strong>POUSSE</strong>
+                </span>
+
+            </a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-controls="navigation"
+                onclick="ouvrirMenu()"
+            >
+                Menu
+            </button>
+
+            <nav
+                class="nav"
+                id="navigation"
+                aria-label="Navigation principale"
+            >
+                <a href="index.html">
+                    Accueil
+                </a>
+
+                <a href="trouver-mes-plantes.html">
+                    Trouver mes plantes
+                </a>
+
+                <a href="catalogue.html">
+                    Catalogue
+                </a>
+
+                <a href="bordeaux.html">
+                    À Bordeaux
+                </a>
+
+                <a href="mon-jardin.html" aria-current="page">
+                    Mon jardin
+                </a>
+
+                <a href="a-propos-contact.html">
+                    À propos
+                </a>
+            </nav>
+
+            <a class="header-cta" href="catalogue.html">
+                Ajouter une plante ↗
+            </a>
+
+        </div>
+
+    </header>
+
+    <main id="contenu">
+
+        <section class="page-intro container">
+
+            <p class="eyebrow">
+                VOTRE CARNET DE CULTURE
+            </p>
+
+            <h1>
+                Votre jardin,
+                <em>à portée de main.</em>
+            </h1>
+
+            <p>
+                Enregistrez vos plantes, indiquez la date du dernier arrosage
+                et retrouvez vos notes. Vos données restent dans le navigateur
+                de cet appareil.
+            </p>
+
+        </section>
+
+        <section class="section container garden-layout">
+
+            <form
+                class="panel garden-form"
+                id="garden-form"
+                onsubmit="ajouterPlante(); return false"
+            >
+
+                <div class="form-heading">
+
+                    <span class="form-kicker">
+                        NOUVELLE FICHE
+                    </span>
+
+                    <h2>
+                        Ajouter une plante.
+                    </h2>
+
+                    <p>
+                        Les informations peuvent être modifiées ou supprimées ensuite.
+                    </p>
+
+                </div>
+
+                <div class="field">
+
+                    <label for="plant-name">
+                        Nom de la plante *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="plant-name"
+                        name="plantName"
+                        placeholder="Ex. : Mon pothos"
+                        maxlength="50"
+                        required
+                    >
+
+                </div>
+
+                <div class="field">
+
+                    <label for="plant-location">
+                        Emplacement
+                    </label>
+
+                    <select id="plant-location" name="location">
+
+                        <option>Salon</option>
+                        <option>Chambre</option>
+                        <option>Balcon</option>
+                        <option>Terrasse</option>
+                        <option>Jardin</option>
+                        <option>Autre</option>
+
+                    </select>
+
+                </div>
+
+                <div class="field">
+
+                    <label for="last-watering">
+                        Dernier arrosage
+                    </label>
+
+                    <input
+                        type="date"
+                        id="last-watering"
+                        name="lastWatering"
+                    >
+
+                </div>
+
+                <div class="field">
+
+                    <label for="plant-notes">
+                        Notes
+                    </label>
+
+                    <textarea
+                        id="plant-notes"
+                        name="notes"
+                        placeholder="Exposition, observations, prochain geste…"
+                        maxlength="240"
+                        rows="3"
+                    ></textarea>
+
+                </div>
+
+                <button
+                    class="button button-primary button-full"
+                    type="submit"
+                >
+                    Enregistrer la plante
+                </button>
+
+                <p
+                    class="form-note"
+                    id="garden-feedback"
+                    role="status"
+                ></p>
+
+            </form>
+
+            <div class="garden-content">
+
+                <div class="garden-summary">
+
+                    <div>
+
+                        <span class="summary-label">
+                            DANS VOTRE CARNET
+                        </span>
+
+                        <strong id="plant-total">
+                            0
+                        </strong>
+
+                        <span>
+                            plante(s) enregistrée(s)
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <span class="summary-label">
+                            À FAIRE
+                        </span>
+
+                        <strong id="watering-total">
+                            0
+                        </strong>
+
+                        <span>
+                            arrosage(s) à vérifier
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="list-heading">
+
+                    <h2>
+                        Mes plantes
+                    </h2>
+
+                    <button
+                        class="text-button"
+                        id="clear-garden"
+                        type="button"
+                        onclick="viderJardin()"
+                    >
+                        Vider le carnet
+                    </button>
+
+                </div>
+
+                <div
+                    class="garden-list"
+                    id="garden-list"
+                    aria-live="polite"
+                >
+
+                    <div class="empty-garden">
+
+                        <h3>
+                            Votre carnet est encore vide.
+                        </h3>
+
+                        <p>
+                            Ajoutez votre première plante avec le formulaire.
+                        </p>
+
+                        <a class="text-link" href="catalogue.html">
+                            Choisir dans le catalogue ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <p class="form-note">
+                    Conseil : la date d'arrosage est un simple repère.
+                    Touchez le terreau avant d'arroser : les besoins varient
+                    selon la plante, la saison et l'environnement.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <div>
+
+                <a class="brand brand-footer" href="index.html">
+
+                    <span class="brand-mark">DP</span>
+
+                    <span>
+                        DERNIÈRE
+                        <strong>POUSSE</strong>
+                    </span>
+
+                </a>
+
+                <p>
+                    Choisir mieux. Cultiver simplement.
+                </p>
+
+            </div>
+
+            <div class="footer-right">
+
+                <span class="school-mark">
+
+                    EFREI
+
+                    <small>
+                        ÉCOLE D'INGÉNIEUR·E·S
+                    </small>
+
+                </span>
+
+                <a href="a-propos-contact.html">
+                    À propos et contact
+                </a>
+
+                <span>
+                    © 2026 Dernière Pousse
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
