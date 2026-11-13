@@ -16,3 +16,42 @@ function ouvrirMenu() {
     }
 
 }
+let images = [
+    "img/pothos.avif",
+    "img/monstera.avif",
+    "img/lavande.avif",
+    "img/chlorophytum.avif"
+];
+
+let numero = 0;
+
+
+function imageSuivante() {
+
+    numero++;
+
+    if (numero >= images.length) {
+        numero = 0;
+    }
+
+    document.getElementById("carrousel").src = images[numero];
+
+}
+
+
+function imagePrecedente() {
+
+    numero--;
+
+    if (numero < 0) {
+        numero = images.length - 1;
+    }
+
+    document.getElementById("carrousel").src = images[numero];
+
+}
+
+
+if (document.getElementById("carrousel")) {
+    setInterval(imageSuivante, 5000);
+}
