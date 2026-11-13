@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+        name="description"
+        content="Questionnaire pour trouver des plantes adaptées à votre espace, à la lumière et à votre rythme."
+    >
+
+    <title>Trouver mes plantes — Dernière Pousse</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/main.js" defer></script>
+    <script src="js/questionnaire.js" defer></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#contenu">
+        Aller au contenu
+    </a>
+
+    <header class="site-header">
+
+        <div class="container header-inner">
+
+            <a class="brand" href="index.html">
+
+                <span class="brand-mark">DP</span>
+
+                <span>
+                    DERNIÈRE
+                    <strong>POUSSE</strong>
+                </span>
+
+            </a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-controls="navigation"
+                onclick="ouvrirMenu()"
+            >
+                Menu
+            </button>
+
+            <nav
+                class="nav"
+                id="navigation"
+                aria-label="Navigation principale"
+            >
+                <a href="index.html">
+                    Accueil
+                </a>
+
+                <a
+                    href="trouver-mes-plantes.html"
+                    aria-current="page"
+                >
+                    Trouver mes plantes
+                </a>
+
+                <a href="catalogue.html">
+                    Catalogue
+                </a>
+
+                <a href="bordeaux.html">
+                    À Bordeaux
+                </a>
+
+                <a href="mon-jardin.html">
+                    Mon jardin
+                </a>
+
+                <a href="a-propos-contact.html">
+                    À propos
+                </a>
+            </nav>
+
+            <a class="header-cta" href="catalogue.html">
+                Le catalogue ↗
+            </a>
+
+        </div>
+
+    </header>
+
+    <main id="contenu">
+
+        <section class="page-intro container">
+
+            <p class="eyebrow">
+                VOTRE PROFIL VÉGÉTAL
+            </p>
+
+            <h1>
+                Trouvons les plantes
+                <em>qui vous correspondent.</em>
+            </h1>
+
+            <p>
+                Répondez à quelques questions. Le questionnaire compare
+                vos réponses aux besoins des plantes du catalogue et vous
+                propose les options les plus cohérentes.
+            </p>
+
+        </section>
+
+        <section class="section container quiz-layout">
+
+            <form
+                class="panel quiz-form"
+                id="plant-quiz"
+                onsubmit="trouverPlantes(); return false"
+            >
+
+                <div class="form-heading">
+
+                    <span class="form-kicker">
+                        EN 2 MINUTES
+                    </span>
+
+                    <h2>
+                        Parlons de votre espace.
+                    </h2>
+
+                    <p>
+                        Les champs marqués d'un astérisque sont obligatoires.
+                    </p>
+
+                </div>
+
+                <div class="field">
+
+                    <label for="place">
+                        Où souhaitez-vous installer vos plantes ? *
+                    </label>
+
+                    <select id="place" name="place" required>
+
+                        <option value="">
+                            Sélectionner
+                        </option>
+
+                        <option value="interieur">
+                            À l'intérieur
+                        </option>
+
+                        <option value="balcon">
+                            Balcon ou terrasse
+                        </option>
+
+                        <option value="jardin">
+                            Jardin
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="field">
+
+                    <label for="light">
+                        Quelle est la luminosité ? *
+                    </label>
+
+                    <select id="light" name="light" required>
+
+                        <option value="">
+                            Sélectionner
+                        </option>
+
+                        <option value="faible">
+                            Plutôt faible
+                        </option>
+
+                        <option value="moyenne">
+                            Lumineuse sans soleil direct
+                        </option>
+
+                        <option value="forte">
+                            Très lumineuse / soleil direct
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="field">
+
+                    <label for="space">
+                        Quelle place avez-vous ? *
+                    </label>
+
+                    <select id="space" name="space" required>
+
+                        <option value="">
+                            Sélectionner
+                        </option>
+
+                        <option value="petit">
+                            Peu de place
+                        </option>
+
+                        <option value="moyen">
+                            Un coin ou plusieurs pots
+                        </option>
+
+                        <option value="grand">
+                            Grand espace
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="field">
+
+                    <label for="time">
+                        Combien de temps pouvez-vous consacrer à l'entretien ? *
+                    </label>
+
+                    <select id="time" name="time" required>
+
+                        <option value="">
+                            Sélectionner
+                        </option>
+
+                        <option value="peu">
+                            Moins de 15 minutes par semaine
+                        </option>
+
+                        <option value="moyen">
+                            15 à 30 minutes par semaine
+                        </option>
+
+                        <option value="beaucoup">
+                            Plus de 30 minutes par semaine
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="field">
+
+                    <label for="experience">
+                        Votre expérience *
+                    </label>
+
+                    <select id="experience" name="experience" required>
+
+                        <option value="">
+                            Sélectionner
+                        </option>
+
+                        <option value="debutant">
+                            Je débute
+                        </option>
+
+                        <option value="intermediaire">
+                            J'ai déjà quelques plantes
+                        </option>
+
+                        <option value="confirme">
+                            Je jardine régulièrement
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <button
+                    class="button button-primary button-full"
+                    type="submit"
+                >
+                    Voir mes recommandations
+                    <span aria-hidden="true">↗</span>
+                </button>
+
+                <p class="form-note">
+                    Les résultats sont des suggestions indicatives.
+                    Vérifiez toujours les conditions réelles de votre pièce
+                    ou de votre extérieur.
+                </p>
+
+            </form>
+
+            <aside class="quiz-aside">
+
+                <img
+                    src="img/basilic.avif"
+                    alt="Plante verte en pot"
+                    loading="lazy"
+                >
+
+                <div class="aside-copy">
+
+                    <p class="eyebrow">
+                        LE BON RÉFLEXE
+                    </p>
+
+                    <h2>
+                        La lumière avant tout.
+                    </h2>
+
+                    <p>
+                        Observez votre espace à différents moments
+                        de la journée. Une pièce claire n'offre pas
+                        forcément du soleil direct.
+                    </p>
+
+                    <a class="text-link" href="catalogue.html">
+                        Comparer les plantes ↗
+                    </a>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+        <section
+            class="section container"
+            id="quiz-results"
+            aria-live="polite"
+            style="display: none;"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        VOS RÉSULTATS
+                    </p>
+
+                    <h2>
+                        Les plantes à regarder de près.
+                    </h2>
+
+                </div>
+
+                <p id="result-summary"></p>
+
+            </div>
+
+            <div
+                class="plant-grid"
+                id="recommendations"
+            ></div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <div>
+
+                <a class="brand brand-footer" href="index.html">
+
+                    <span class="brand-mark">DP</span>
+
+                    <span>
+                        DERNIÈRE
+                        <strong>POUSSE</strong>
+                    </span>
+
+                </a>
+
+                <p>
+                    Choisir mieux. Cultiver simplement.
+                </p>
+
+            </div>
+
+            <div class="footer-right">
+
+                <span class="school-mark">
+
+                    EFREI
+
+                    <small>
+                        ÉCOLE D'INGÉNIEUR·E·S
+                    </small>
+
+                </span>
+
+                <a href="a-propos-contact.html">
+                    À propos et contact
+                </a>
+
+                <span>
+                    © 2026 Dernière Pousse
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
