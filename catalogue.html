@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+        name="description"
+        content="Catalogue de plantes d'intérieur et d'extérieur avec leurs besoins essentiels."
+    >
+
+    <title>Catalogue — Dernière Pousse</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/main.js" defer></script>
+    <script src="js/catalogue.js" defer></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#contenu">
+        Aller au contenu
+    </a>
+
+    <header class="site-header">
+
+        <div class="container header-inner">
+
+            <a class="brand" href="index.html">
+
+                <span class="brand-mark">
+                    DP
+                </span>
+
+                <span>
+                    DERNIÈRE
+                    <strong>POUSSE</strong>
+                </span>
+
+            </a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-controls="navigation"
+                aria-expanded="false"
+            >
+                Menu
+            </button>
+
+            <nav
+                class="nav"
+                id="navigation"
+                aria-label="Navigation principale"
+            >
+
+                <a href="index.html">
+                    Accueil
+                </a>
+
+                <a href="trouver-mes-plantes.html">
+                    Trouver mes plantes
+                </a>
+
+                <a
+                    href="catalogue.html"
+                    aria-current="page"
+                >
+                    Catalogue
+                </a>
+
+                <a href="bordeaux.html">
+                    À Bordeaux
+                </a>
+
+                <a href="mon-jardin.html">
+                    Mon jardin
+                </a>
+
+                <a href="a-propos-contact.html">
+                    À propos
+                </a>
+
+            </nav>
+
+            <a
+                class="header-cta"
+                href="trouver-mes-plantes.html"
+            >
+                Faire le test ↗
+            </a>
+
+        </div>
+
+    </header>
+
+    <main id="contenu">
+
+        <section class="page-intro container">
+
+            <p class="eyebrow">
+                LE CATALOGUE
+            </p>
+
+            <h1>
+                Des plantes pour
+                <em>chaque espace.</em>
+            </h1>
+
+            <p>
+                Découvrez une sélection de plantes courantes.
+                Utilisez les filtres pour affiner votre recherche
+                selon l'exposition et le niveau d'entretien.
+            </p>
+
+        </section>
+
+        <div class="section container">
+
+            <div class="catalogue-tools panel">
+
+                <div class="field search-field">
+
+                    <label for="search-plant">
+                        Rechercher une plante
+                    </label>
+
+                    <input
+                        type="search"
+                        id="search-plant"
+                        placeholder="Ex. : pothos, aromatique…"
+                    >
+
+                </div>
+
+                <div class="field">
+
+                    <label for="filter-light">
+                        Luminosité
+                    </label>
+
+                    <select id="filter-light">
+
+                        <option value="toutes">
+                            Toutes
+                        </option>
+
+                        <option value="faible">
+                            Faible à moyenne
+                        </option>
+
+                        <option value="moyenne">
+                            Moyenne à forte
+                        </option>
+
+                        <option value="forte">
+                            Forte / soleil
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="field">
+
+                    <label for="filter-care">
+                        Entretien
+                    </label>
+
+                    <select id="filter-care">
+
+                        <option value="tous">
+                            Tous les niveaux
+                        </option>
+
+                        <option value="facile">
+                            Facile
+                        </option>
+
+                        <option value="modere">
+                            Modéré
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <button
+                    class="button button-outline"
+                    id="reset-filters"
+                    type="button"
+                >
+                    Réinitialiser
+                </button>
+
+            </div>
+
+            <p
+                class="results-count"
+                id="catalogue-count"
+                aria-live="polite"
+            >
+                6 plantes proposées
+            </p>
+
+            <div class="plant-grid" id="plant-list">
+
+                <article
+                    class="plant-card"
+                    id="pothos"
+                    data-name="pothos"
+                    data-light="faible moyenne"
+                    data-care="facile"
+                    data-place="interieur"
+                >
+
+                    <img
+                        src="img/pothos.avif"
+                        alt="Pothos aux feuilles vertes"
+                        loading="lazy"
+                    >
+
+                    <div class="plant-card-body">
+
+                        <div class="plant-card-top">
+
+                            <span class="tag">
+                                Intérieur
+                            </span>
+
+                            <span class="care-level">
+                                Facile
+                            </span>
+
+                        </div>
+
+                        <h2>
+                            Pothos
+                        </h2>
+
+                        <p>
+                            Une plante retombante appréciée pour sa croissance
+                            et sa tolérance à différentes conditions lumineuses.
+                        </p>
+
+                        <dl class="plant-facts">
+
+                            <div>
+                                <dt>
+                                    Lumière
+                                </dt>
+
+                                <dd>
+                                    Indirecte, faible à moyenne
+                                </dd>
+                            </div>
+
+                            <div>
+                                <dt>
+                                    Arrosage
+                                </dt>
+
+                                <dd>
+                                    Quand le terreau sèche en surface
+                                </dd>
+                            </div>
+
+                            <div>
+                                <dt>
+                                    Emplacement
+                                </dt>
+
+                                <dd>
+                                    Étagère, suspension
+                                </dd>
+                            </div>
+
+                        </dl>
+
+                        <button
+                            class="small-action add-plant"
+                            data-plant="Pothos"
+                            type="button"
+                        >
+                            Ajouter à mon jardin +
+                        </button>
+
+                    </div>
+
+                </article>
+
+                <article
+                    class="plant-card"
+                    id="sansevieria"
+                    data-name="sansevieria langue de belle-mère"
+                    data-light="faible moyenne forte"
+                    data-care="facile"
+                    data-place="interieur"
+                >
+
+                    <img
+                        src="img/sansevieria.avif"
+                        alt="Sansevieria en pot"
+                        loading="lazy"
+                    >
+
+                    <div class="plant-card-body">
+
+                        <div class="plant-card-top">
+
+                            <span class="tag">
+                                Intérieur
+                            </span>
+
+                            <span class="care-level">
+                                Facile
+                            </span>
+
+                        </div>
+
+                        <h2>
+                            Sansevieria
+                        </h2>
+
+                        <p>
+                            Une plante graphique qui demande peu d'arrosage
+                            et supporte plusieurs niveaux de luminosité.
+                        </p>
+
+                        <dl class="plant-facts">
+
+                            <div>
+                                <dt>
+                                    Lumière
+                                </dt>
+
+                                <dd>
+                                    Faible à forte
+                                </dd>
+                            </div>
+
+                            <div>
+                                <dt>
+                                    Arrosage
+                                </dt>
+
+                                <dd>
+                                    Espacé, substrat sec
+                                </dd>
+                            </div>
+
+                            <div>
+                                <dt>
+                                    Emplacement
+                                </dt>
+
+                                <dd>
+                                    Petits espaces intérieurs
+                                </dd>
+                            </div>
+
+                        </dl>
+
+                        <button
+                            class="small-action add-plant"
+                            data-plant="Sansevieria"
+                            type="button"
+                        >
+                            Ajouter à mon jardin +
+                        </button>
+
+                    </div>
+
+                </article>
+
+                <article
+                    class="plant-card"
+                    id="monstera"
+                    data-name="monstera"
+                    data-light="moyenne forte"
+                    data-care="modere"
+                    data-place="interieur"
+                >
+
+                    <img
+                        src="img/monstera.avif"
+                        alt="Monstera aux grandes feuilles"
+                        loading="lazy"
+                    >
+
+                    <div class="plant-card-body">
+
+                        <div class="plant-card-top">
+
+                            <span class="tag">
+                                Intérieur
+                            </span>
+
+                            <span class="care-level">
+                                Modéré
+                            </span>
+
+                        </div>
+
+                        <h2>
+                            Monstera
+                        </h2>
+
+                        <p>
+                            Ses grandes feuilles découpées donnent du caractère
+                            à une pièce lumineuse, sans soleil brûlant.
+                        </p>
+
+                        <dl class="plant-facts">
+
+                            <div>
+                                <dt>
+                                    Lumière
+                                </dt>
+
+                                <dd>
+                                    Moyenne à forte, indirecte
+                                </dd>
+                            </div>
+
+                            <div>
+                                <dt>
+                                    Arrosage
+                                </dt>
+
+                                <dd>
+                                    Lorsque le dessus du terreau sèche
+                                </dd>
+                            </div>
+
+                            <div>
+                                <dt>
+                                    Emplacement
+                                </dt>
+
+                                <dd>
+                                    Pièce lumineuse
+                                </dd>
+                            </div>
+
+                        </dl>
+
+                        <button
+                            class="small-action add-plant"
+                            data-plant="Monstera"
+                            type="button"
+                        >
+                            Ajouter à mon jardin +
+                        </button>
+
+                    </div>
+
+                </article>
+
+                <article
+                    class="plant-card"
+                    id="chlorophytum"
+                    data-name="chlorophytum plante araignée"
+                    data-light="moyenne forte"
+                    data-care="facile"
+                    data-place="interieur"
+                >
+
+                    <img
+                        src="img/chlorophytum.avif"
+                        alt="Plante verte en pot"
+                        loading="lazy"
+                    >
+
+                    <div class="plant-card-body">
+
+                        <div class="plant-card-top">
+
+                            <span class="tag">
+                                Intérieur
+                            </span>
+
+                            <span class="care-level">
+                                Facile
+                            </span>
+
+                        </div>
+
+                        <h2>
+                            Chlorophytum
+                        </h2>
+
+                        <p>
+                            Facile à multiplier, il produit des rejets
+                            et s'adapte bien à une pièce claire.
+                        </p>
+
+                        <dl class="plant-facts">
+
+                            <div>
+                                <dt>
+                                    Lumière
+                                </dt>
+
+                                <dd>
+                                    Moyenne à forte
+                                </dd>
+                            </div>
+
+                            <div>
+                                <dt>
+                                    Arrosage
+                                </dt>
+
+                                <dd>
+                                    Modéré, sans eau stagnante
+                                </dd>
+                            </div>
+
+                            <div>
+                                <dt>
+                                    Emplacement
+                                </dt>
+
+                                <dd>
+                                    Étagère ou suspension
+                                </dd>
+                            </div>
+
+                        </dl>
+
+                        <button
+                            class="small-action add-plant"
+                            data-plant="Chlorophytum"
+                            type="button"
+                        >
+                            Ajouter à mon jardin +
+                        </button>
+
+                    </div>
+
+                </article>
+
+                <article
+                    class="plant-card"
+                    id="basilic"
+                    data-name="basilic aromatique"
+                    data-light="forte"
+                    data-care="modere"
+                    data-place="balcon jardin"
+                >
+
+                    <img
+                        src="img/basilic.avif"
+                        alt="Basilic aromatique en pot"
+                        loading="lazy"
+                    >
+
+                    <div class="plant-card-body">
+
+                        <div class="plant-card-top">
+
+                            <span class="tag">
+                                Balcon / jardin
+                            </span>
+
+                            <span class="care-level">
+                                Modéré
+                            </span>
+
+                        </div>
+
+                        <h2>
+                            Basilic
+                        </h2>
+
+                        <p>
+                            Une aromatique à placer au soleil et à récolter
+                            régulièrement pendant la belle saison.
+                        </p>
+
+                        <dl class="plant-facts">
+
+                            <div>
+                                <dt>
+                                    Lumière
+                                </dt>
+
+                                <dd>
+                                    Forte, soleil doux
+                                </dd>
+                            </div>
+
+                            <div>
+                                <dt>
+                                    Arrosage
+                                </dt>
+
+                                <dd>
+                                    Régulier, terreau frais
+                                </dd>
+                            </div>
+
+                            <div>
+                                <dt>
+                                    Emplacement
+                                </dt>
+
+                                <dd>
+                                    Balcon ou rebord de fenêtre
+                                </dd>
+                            </div>
+
+                        </dl>
+
+                        <button
+                            class="small-action add-plant"
+                            data-plant="Basilic"
+                            type="button"
+                        >
+                            Ajouter à mon jardin +
+                        </button>
+
+                    </div>
+
+                </article>
+
+                <article
+                    class="plant-card"
+                    id="lavande"
+                    data-name="lavande"
+                    data-light="forte"
+                    data-care="facile"
+                    data-place="balcon jardin"
+                >
+
+                    <img
+                        src="img/lavande.avif"
+                        alt="Lavande en fleurs"
+                        loading="lazy"
+                    >
+
+                    <div class="plant-card-body">
+
+                        <div class="plant-card-top">
+
+                            <span class="tag">
+                                Balcon / jardin
+                            </span>
+
+                            <span class="care-level">
+                                Facile
+                            </span>
+
+                        </div>
+
+                        <h2>
+                            Lavande
+                        </h2>
+
+                        <p>
+                            Elle apprécie le plein soleil, un sol drainé
+                            et des arrosages limités une fois installée.
+                        </p>
+
+                        <dl class="plant-facts">
+
+                            <div>
+                                <dt>
+                                    Lumière
+                                </dt>
+
+                                <dd>
+                                    Forte, plein soleil
+                                </dd>
+                            </div>
+
+                            <div>
+                                <dt>
+                                    Arrosage
+                                </dt>
+
+                                <dd>
+                                    Faible après installation
+                                </dd>
+                            </div>
+
+                            <div>
+                                <dt>
+                                    Emplacement
+                                </dt>
+
+                                <dd>
+                                    Balcon ensoleillé ou jardin
+                                </dd>
+                            </div>
+
+                        </dl>
+
+                        <button
+                            class="small-action add-plant"
+                            data-plant="Lavande"
+                            type="button"
+                        >
+                            Ajouter à mon jardin +
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <p
+                class="empty-state"
+                id="no-plants"
+                hidden
+            >
+                Aucune plante ne correspond à ces filtres.
+                Essayez d'élargir votre recherche.
+            </p>
+
+        </div>
+
+        <section class="section soft-section">
+
+            <div class="container table-wrap">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            COMPARER EN UN COUP D'ŒIL
+                        </p>
+
+                        <h2>
+                            Les besoins essentiels.
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Ce tableau donne des repères généraux.
+                        Ajustez toujours l'arrosage à la saison
+                        et à l'état du substrat.
+                    </p>
+
+                </div>
+
+                <div class="table-scroll">
+
+                    <table>
+
+                        <caption>
+                            Comparaison indicative des plantes du catalogue
+                        </caption>
+
+                        <thead>
+
+                            <tr>
+
+                                <th scope="col">
+                                    Plante
+                                </th>
+
+                                <th scope="col">
+                                    Lumière
+                                </th>
+
+                                <th scope="col">
+                                    Entretien
+                                </th>
+
+                                <th scope="col">
+                                    Type d'espace
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <th scope="row">
+                                    Pothos
+                                </th>
+
+                                <td>
+                                    Faible à moyenne
+                                </td>
+
+                                <td>
+                                    Facile
+                                </td>
+
+                                <td>
+                                    Intérieur
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <th scope="row">
+                                    Sansevieria
+                                </th>
+
+                                <td>
+                                    Faible à forte
+                                </td>
+
+                                <td>
+                                    Facile
+                                </td>
+
+                                <td>
+                                    Intérieur
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <th scope="row">
+                                    Monstera
+                                </th>
+
+                                <td>
+                                    Moyenne à forte
+                                </td>
+
+                                <td>
+                                    Modéré
+                                </td>
+
+                                <td>
+                                    Intérieur
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <th scope="row">
+                                    Chlorophytum
+                                </th>
+
+                                <td>
+                                    Moyenne à forte
+                                </td>
+
+                                <td>
+                                    Facile
+                                </td>
+
+                                <td>
+                                    Intérieur
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <th scope="row">
+                                    Basilic
+                                </th>
+
+                                <td>
+                                    Forte
+                                </td>
+
+                                <td>
+                                    Modéré
+                                </td>
+
+                                <td>
+                                    Balcon / jardin
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <th scope="row">
+                                    Lavande
+                                </th>
+
+                                <td>
+                                    Forte
+                                </td>
+
+                                <td>
+                                    Facile
+                                </td>
+
+                                <td>
+                                    Balcon / jardin
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <div>
+
+                <a
+                    class="brand brand-footer"
+                    href="index.html"
+                >
+
+                    <span class="brand-mark">
+                        DP
+                    </span>
+
+                    <span>
+                        DERNIÈRE
+                        <strong>POUSSE</strong>
+                    </span>
+
+                </a>
+
+                <p>
+                    Choisir mieux. Cultiver simplement.
+                </p>
+
+            </div>
+
+            <div class="footer-right">
+
+                <span class="school-mark">
+                    EFREI
+
+                    <small>
+                        ÉCOLE D'INGÉNIEUR·E·S
+                    </small>
+                </span>
+
+                <a href="a-propos-contact.html">
+                    À propos et contact
+                </a>
+
+                <span>
+                    ©
+                    <span data-year></span>
+                    Dernière Pousse
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
