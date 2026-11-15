@@ -1,3 +1,4 @@
+
 function trouverPlantes() {
 
     let form = document.getElementById("plant-quiz");
@@ -163,5 +164,6 @@ function trouverPlantes() {
         "Suggestions calculées à partir de votre espace, de la lumière et du temps disponible.";
 
     results.style.display = "block";
+    results.scrollIntoView();
 
 }

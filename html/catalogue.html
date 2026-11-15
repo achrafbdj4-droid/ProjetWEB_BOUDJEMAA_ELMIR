@@ -58,6 +58,7 @@
                 type="button"
                 aria-controls="navigation"
                 aria-expanded="false"
+                onclick="ouvrirMenu()"
             >
                 Menu
             </button>
@@ -143,6 +144,7 @@
                         type="search"
                         id="search-plant"
                         placeholder="Ex. : pothos, aromatique…"
+                        oninput="filtrerPlantes()"
                     >
 
                 </div>
@@ -153,7 +155,7 @@
                         Luminosité
                     </label>
 
-                    <select id="filter-light">
+                    <select id="filter-light" onchange="filtrerPlantes()">
 
                         <option value="toutes">
                             Toutes
@@ -181,7 +183,7 @@
                         Entretien
                     </label>
 
-                    <select id="filter-care">
+                    <select id="filter-care" onchange="filtrerPlantes()">
 
                         <option value="tous">
                             Tous les niveaux
@@ -203,6 +205,7 @@
                     class="button button-outline"
                     id="reset-filters"
                     type="button"
+                    onclick="reinitialiser()"
                 >
                     Réinitialiser
                 </button>
