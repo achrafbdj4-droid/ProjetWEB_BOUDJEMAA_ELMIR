@@ -25,7 +25,7 @@ function trouverPlantes() {
         {
             name: "Pothos",
             id: "pothos",
-            image: "img/pothos.avif",
+            image: "../img/pothos.avif",
             light: ["faible", "moyenne"],
             places: ["interieur"],
             care: "facile",
@@ -36,7 +36,7 @@ function trouverPlantes() {
         {
             name: "Sansevieria",
             id: "sansevieria",
-            image: "img/sansevieria.avif",
+            image: "../img/sansevieria.avif",
             light: ["faible", "moyenne", "forte"],
             places: ["interieur"],
             care: "facile",
@@ -47,7 +47,7 @@ function trouverPlantes() {
         {
             name: "Monstera",
             id: "monstera",
-            image: "img/monstera.avif",
+            image: "../img/monstera.avif",
             light: ["moyenne", "forte"],
             places: ["interieur"],
             care: "modere",
@@ -58,7 +58,7 @@ function trouverPlantes() {
         {
             name: "Chlorophytum",
             id: "chlorophytum",
-            image: "img/chlorophytum.avif",
+            image: "../img/chlorophytum.avif",
             light: ["moyenne", "forte"],
             places: ["interieur"],
             care: "facile",
@@ -69,7 +69,7 @@ function trouverPlantes() {
         {
             name: "Basilic",
             id: "basilic",
-            image: "img/basilic.avif",
+            image: "../img/basilic.avif",
             light: ["forte"],
             places: ["balcon", "jardin"],
             care: "modere",
@@ -80,7 +80,7 @@ function trouverPlantes() {
         {
             name: "Lavande",
             id: "lavande",
-            image: "img/lavande.avif",
+            image: "../img/lavande.avif",
             light: ["forte"],
             places: ["balcon", "jardin"],
             care: "facile",

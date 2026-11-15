@@ -24,10 +24,10 @@
         rel="stylesheet"
     >
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
-    <script src="js/main.js" defer></script>
-    <script src="js/catalogue.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/catalogue.js" defer></script>
 </head>
 
 <body>
@@ -217,6 +217,8 @@
                 6 plantes proposées
             </p>
 
+            <p id="catalogue-feedback" aria-live="polite"></p>
+
             <div class="plant-grid" id="plant-list">
 
                 <article
@@ -229,7 +231,7 @@
                 >
 
                     <img
-                        src="img/pothos.avif"
+                        src="../img/pothos.avif"
                         alt="Pothos aux feuilles vertes"
                         loading="lazy"
                     >
@@ -295,6 +297,7 @@
                             class="small-action add-plant"
                             data-plant="Pothos"
                             type="button"
+                            onclick="ajouterAuJardin('Pothos')"
                         >
                             Ajouter à mon jardin +
                         </button>
@@ -313,7 +316,7 @@
                 >
 
                     <img
-                        src="img/sansevieria.avif"
+                        src="../img/sansevieria.avif"
                         alt="Sansevieria en pot"
                         loading="lazy"
                     >
@@ -379,6 +382,7 @@
                             class="small-action add-plant"
                             data-plant="Sansevieria"
                             type="button"
+                            onclick="ajouterAuJardin('Sansevieria')"
                         >
                             Ajouter à mon jardin +
                         </button>
@@ -397,7 +401,7 @@
                 >
 
                     <img
-                        src="img/monstera.avif"
+                        src="../img/monstera.avif"
                         alt="Monstera aux grandes feuilles"
                         loading="lazy"
                     >
@@ -463,6 +467,7 @@
                             class="small-action add-plant"
                             data-plant="Monstera"
                             type="button"
+                            onclick="ajouterAuJardin('Monstera')"
                         >
                             Ajouter à mon jardin +
                         </button>
@@ -481,7 +486,7 @@
                 >
 
                     <img
-                        src="img/chlorophytum.avif"
+                        src="../img/chlorophytum.avif"
                         alt="Plante verte en pot"
                         loading="lazy"
                     >
@@ -547,6 +552,7 @@
                             class="small-action add-plant"
                             data-plant="Chlorophytum"
                             type="button"
+                            onclick="ajouterAuJardin('Chlorophytum')"
                         >
                             Ajouter à mon jardin +
                         </button>
@@ -565,7 +571,7 @@
                 >
 
                     <img
-                        src="img/basilic.avif"
+                        src="../img/basilic.avif"
                         alt="Basilic aromatique en pot"
                         loading="lazy"
                     >
@@ -631,6 +637,7 @@
                             class="small-action add-plant"
                             data-plant="Basilic"
                             type="button"
+                            onclick="ajouterAuJardin('Basilic')"
                         >
                             Ajouter à mon jardin +
                         </button>
@@ -649,7 +656,7 @@
                 >
 
                     <img
-                        src="img/lavande.avif"
+                        src="../img/lavande.avif"
                         alt="Lavande en fleurs"
                         loading="lazy"
                     >
@@ -715,6 +722,7 @@
                             class="small-action add-plant"
                             data-plant="Lavande"
                             type="button"
+                            onclick="ajouterAuJardin('Lavande')"
                         >
                             Ajouter à mon jardin +
                         </button>

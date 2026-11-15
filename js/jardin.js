@@ -160,6 +160,8 @@ function ajouterPlante() {
 
     }
 
+    afficherJardin();
+
 }
 
 
@@ -247,3 +249,5 @@ function viderJardin() {
     }
 
 }
+
+afficherJardin();

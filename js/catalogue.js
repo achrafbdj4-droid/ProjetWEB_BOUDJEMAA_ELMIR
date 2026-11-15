@@ -58,69 +58,32 @@ function reinitialiser() {
 }
 
 
-function ajouterAuJardin(name) {
+function ajouterAuJardin(nom) {
 
-    let buttons = document.getElementsByClassName("add-plant");
-    let button = null;
-
-    for (let i = 0; i < buttons.length; i++) {
-
-        if (buttons[i].getAttribute("data-plant") === name) {
-            button = buttons[i];
-            break;
-        }
-
-    }
-
-    if (button === null) {
-        return;
-    }
+    let plants = [];
 
     try {
-
-        let stored = JSON.parse(
+        plants = JSON.parse(
             localStorage.getItem("dernierePousseGarden") || "[]"
         );
-
-        let existe = false;
-
-        for (let i = 0; i < stored.length; i++) {
-
-            if (stored[i].name.toLowerCase() === name.toLowerCase()) {
-                existe = true;
-                break;
-            }
-
-        }
-
-        if (!existe) {
-
-            stored.push({
-                id: Date.now(),
-                name: name,
-                location: "À définir",
-                lastWatering: "",
-                notes: ""
-            });
-
-            localStorage.setItem(
-                "dernierePousseGarden",
-                JSON.stringify(stored)
-            );
-
-            button.textContent = "Ajoutée à mon jardin";
-            button.disabled = true;
-
-        } else {
-
-            button.textContent = "Déjà dans mon jardin";
-
-        }
-
     } catch (error) {
-
-        button.textContent = "Ajout indisponible";
-
+        plants = [];
     }
+
+    plants.push({
+        id: Date.now(),
+        name: nom,
+        location: "Intérieur",
+        lastWatering: "",
+        notes: "Ajoutée depuis le catalogue"
+    });
+
+    localStorage.setItem(
+        "dernierePousseGarden",
+        JSON.stringify(plants)
+    );
+
+    document.getElementById("catalogue-feedback").textContent =
+        nom + " a été ajoutée à votre jardin.";
 
 }

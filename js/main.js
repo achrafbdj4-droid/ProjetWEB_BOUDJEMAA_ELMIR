@@ -17,10 +17,10 @@ function ouvrirMenu() {
 
 }
 let images = [
-    "img/pothos.avif",
-    "img/monstera.avif",
-    "img/lavande.avif",
-    "img/chlorophytum.avif"
+    "../img/pothos.avif",
+    "../img/monstera.avif",
+    "../img/lavande.avif",
+    "../img/chlorophytum.avif"
 ];
 
 let numero = 0;
